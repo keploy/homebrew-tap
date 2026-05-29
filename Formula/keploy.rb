@@ -8,6 +8,9 @@ class Keploy < Formula
 
   depends_on :macos
 
+  conflicts_with "keploy",
+    because: "both install a `keploy` binary; use one or the other"
+
   def install
     bin.install "enterprise_darwin_all" => "keploy"
   end
