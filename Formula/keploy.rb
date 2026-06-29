@@ -1,9 +1,9 @@
 class Keploy < Formula
   desc "Keploy Enterprise — API testing toolkit (free Community Edition tier by default)"
   homepage "https://keploy.io"
-  version "3.5.60"
+  version "3.5.61"
   url "https://keploy.io/ent/dl/#{version}/enterprise_darwin_all"
-  sha256 "4e5d5fc32ddfe483271d7a0d256eb4844d0eedc77a71bca98b15a14df28f8b06"
+  sha256 "4645197da5d057594192108ef4b4db782863e7564472089ef1b00976aaa382b0"
   license :cannot_represent
 
   depends_on :macos
