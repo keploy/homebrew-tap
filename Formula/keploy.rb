@@ -7,6 +7,7 @@ class Keploy < Formula
   license :cannot_represent
 
   depends_on :macos
+  depends_on arch: :arm64
 
   conflicts_with "keploy",
     because: "both install a `keploy` binary; use one or the other"

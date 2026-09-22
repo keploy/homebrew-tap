@@ -19,7 +19,9 @@ brew upgrade keploy        # move to the latest release
 
 ## What gets installed
 
-A universal macOS binary (Apple Silicon + Intel) pulled from `https://keploy.io/ent/dl/<version>/enterprise_darwin_all` and placed at `$(brew --prefix)/bin/keploy`.
+An Apple Silicon (arm64) macOS binary pulled from `https://keploy.io/ent/dl/<version>/enterprise_darwin_arm64` and placed at `$(brew --prefix)/bin/keploy`.
+
+Intel Macs are not supported by this formula (`brew` refuses with an arch requirement error). On an Intel Mac, run Keploy with Docker or Lima: https://keploy.io/docs/installation/macos-installation/
 
 Releases here are bumped automatically by the Keploy Enterprise release pipeline on every tagged version — the formula's `version` and `sha256` track each `vX.Y.Z` tag.
 
