@@ -1,5 +1,5 @@
 class Keploy < Formula
-  desc "Keploy Enterprise — API testing toolkit (free Community Edition tier by default)"
+  desc "API testing toolkit that records real traffic as tests and mocks"
   homepage "https://keploy.io"
   version "3.8.43"
   url "https://keploy.io/ent/dl/#{version}/enterprise_darwin_arm64"
