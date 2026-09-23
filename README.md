@@ -1,6 +1,6 @@
 # homebrew-tap
 
-Homebrew tap for [Keploy Enterprise](https://keploy.io) on macOS.
+Homebrew tap for [Keploy](https://keploy.io) on macOS (Apple Silicon).
 
 ## Install
 
@@ -8,22 +8,21 @@ Homebrew tap for [Keploy Enterprise](https://keploy.io) on macOS.
 brew install keploy/tap/keploy
 ```
 
-That single command taps this repo and installs the latest Keploy Enterprise build. The binary runs in the free Community Edition tier by default — `keploy login` unlocks the rest.
+That single command taps this repo and installs the latest Keploy. It is free to use: `keploy login` signs you in, and your plan decides which additional features are available.
 
-After the first install, use the short name:
+Always use the full name, `keploy/tap/keploy`. On its own, `keploy` resolves to a different formula in homebrew-core, which cannot record apps running natively on your Mac:
 
 ```sh
-brew install keploy        # short name (after tapping once)
-brew upgrade keploy        # move to the latest release
+brew upgrade keploy/tap/keploy   # move to the latest release
 ```
 
 ## What gets installed
 
 An Apple Silicon (arm64) macOS binary pulled from `https://keploy.io/ent/dl/<version>/enterprise_darwin_arm64` and placed at `$(brew --prefix)/bin/keploy`.
 
-Intel Macs are not supported by this formula (`brew` refuses with an arch requirement error). On an Intel Mac, run Keploy with Docker or Lima: https://keploy.io/docs/installation/macos-installation/
+Intel Macs are not supported by this formula (`brew` refuses with an arch requirement error). On an Intel Mac, run Keploy inside Lima: https://keploy.io/docs/installation/macos-installation/#option-2-install-keploy-with-lima
 
-Releases here are bumped automatically by the Keploy Enterprise release pipeline on every tagged version — the formula's `version` and `sha256` track each `vX.Y.Z` tag.
+Releases here are bumped automatically by the Keploy release pipeline on every tagged version — the formula's `version` and `sha256` track each `vX.Y.Z` tag.
 
 ## Linux
 
@@ -37,4 +36,4 @@ Brew formulae can't `sudo`, mount `debugfs`, or set up the Keploy Docker network
 
 ## License
 
-The formula itself (the `.rb` file) is MIT-licensed; see [LICENSE](LICENSE). The Keploy Enterprise binary that the formula downloads is governed by its own commercial terms.
+The formula itself (the `.rb` file) is MIT-licensed; see [LICENSE](LICENSE). The Keploy binary that the formula downloads is governed by its own commercial terms.
