@@ -29,7 +29,7 @@ Releases here are bumped automatically by the Keploy release pipeline on every t
 Not supported via Homebrew. Use the install script:
 
 ```sh
-curl --silent -O -L https://keploy.io/install.sh && source install.sh
+source /dev/stdin <<<"$(curl -fsSL https://keploy.io/install.sh || echo 'echo Keploy installer download failed >&2; return 1')"
 ```
 
 Brew formulae can't `sudo`, mount `debugfs`, or set up the Keploy Docker network — all required by the Linux install — so the curl installer stays the supported path there.
