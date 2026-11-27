@@ -1,9 +1,9 @@
 class Keploy < Formula
   desc "API testing toolkit that records real traffic as tests and mocks"
   homepage "https://keploy.io"
-  version "3.9.26"
+  version "3.9.27"
   url "https://keploy.io/ent/dl/#{version}/enterprise_darwin_arm64"
-  sha256 "20e670d669b263185dfec0ce0cfb7145c70d7804eb677f7fc59ac0eadba474b8"
+  sha256 "de0f3c9cc78e198691ec18334fc96bd336ebd873cfc9d54c62b23a19a971de8f"
   license :cannot_represent
 
   depends_on :macos
